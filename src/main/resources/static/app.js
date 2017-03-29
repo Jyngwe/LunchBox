@@ -9,7 +9,8 @@ function initMap() {
     console.log(uluru);
     map = new google.maps.Map(document.getElementById('map'), {
         zoom: 12,
-        center: uluru
+        center: uluru,
+        styles: mapStyle
     });
     var marker = new google.maps.Marker({
         animation: google.maps.Animation.DROP,
