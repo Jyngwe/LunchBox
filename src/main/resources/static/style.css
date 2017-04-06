@@ -363,6 +363,43 @@ h1 {
     letter-spacing: 1px;
 }
 
+#newFood {
+    font-family: mySecondFont;
+    color:white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color:rgba(128, 128, 128, 0.93);
+    text-align: center;
+    align-content: center;
+    visibility: hidden;
+    z-index:999;
+    width: 550px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 1px;
+}
+
+#updatedSettings {
+    font-family: mySecondFont;
+    color:white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color:rgba(128, 128, 128, 0.93);
+    text-align: center;
+    align-content: center;
+    visibility: hidden;
+    z-index:999;
+    width: 550px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 1px;
+}
+
+
 
 .settings {
     visibility: visible;

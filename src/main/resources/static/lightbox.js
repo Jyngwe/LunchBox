@@ -137,3 +137,19 @@ function closeBuyerInfo() {
     var element = document.querySelector("#buyerinfo");
     element.style.visibility='hidden';
 }
+function showNewFood() {
+    var element = document.querySelector("#newFood");
+    element.style.visibility='visible';
+}
+function closeNewFood() {
+    var element = document.querySelector("#newFood");
+    element.style.visibility='hidden';
+}
+function showUpdatedSettings() {
+    var element = document.querySelector("#updatedSettings");
+    element.style.visibility='visible';
+}
+function closeUpdatedSettings() {
+    var element = document.querySelector("#updatedSettings");
+    element.style.visibility='hidden';
+}

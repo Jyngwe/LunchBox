@@ -42,6 +42,8 @@ public class LogicController {
     String personJson;
     boolean showNewUser = false;
     boolean showLogin = false;
+    boolean newFood = false;
+    boolean updatedSettings = false;
 
     @Autowired
     Repository repository;
@@ -199,13 +201,15 @@ public class LogicController {
         lunchBoxes.add(lunchbox);
         lunchBoxesJson = objectToJSON(lunchBoxes);
         personJson = personToJSON(persons);
+        newFood = true;
 
 
         return new ModelAndView("userSession")
                 .addObject("lunchBoxes", lunchBoxesJson)
                 .addObject("persons", personJson)
                 .addObject("lunchbox", lunchbox)
-                .addObject("location", location);
+                .addObject("location", location)
+                .addObject("newFood", newFood);
     }
 
 
@@ -243,9 +247,11 @@ public class LogicController {
 
         updateUserList(user);
         updatePersonList(person);
+        updatedSettings = true;
 
         return new ModelAndView("settings")
-                .addObject("userSession", session);
+                .addObject("userSession", session)
+                .addObject("updatedSettings", updatedSettings);
     }
 
     //Visa alla lunchboxes tillhörande inloggad person

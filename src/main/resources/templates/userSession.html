@@ -155,6 +155,15 @@
     <button class="close" onclick="closeBuyerInfo();" value="Close">X</button>
 </div>
 
+<!--Bekräftelse upplagd matlåda-->
+<div id="newFood">
+    <h1>Bra jobbat!</h1>
+
+    <button onclick="closeNewFood()">Din mat är nu ute till försäljning!</button>
+    <button class="close" onclick="closeNewFood();" value="Close">X</button>
+</div>
+
+
 <script type="text/javascript" src="/mapstyle.js"></script>
 <script type="text/javascript" src="/lightbox.js"></script>
 <script type="text/javascript" th:utext="'var lunchBoxes =' + ${lunchBoxes}"></script>
@@ -164,6 +173,7 @@
 <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTZQRmcgBi0Fw0rNCsKoUBZohWk7UW0dw&amp;callback=initMap"></script>
 <script type="text/javascript" th:if="${showNewUser}">fn()</script>
 <script type="text/javascript" th:if="${showLogin}">fa()</script>
+<script type="text/javascript" th:if="${newFood}">showNewFood()</script>
 <script type="text/javascript" src="/fileUpload.js"></script>
 
 </body>
