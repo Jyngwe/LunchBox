@@ -13,7 +13,7 @@ public class Person {
     private String firstName;
     @Size(min = 1, max = 120, message = "Vänligen fyll i ditt efternamn.")
     private String lastName;
-    @Size(min = 1, max = 15, message = "Vänligen fyll i ditt telefonnummer med siffror.")
+    @Size(min = 1, max = 10, message = "Vänligen fyll i ditt telefonnummer med max 10 siffror")
     @Pattern(regexp = "^[0-9]+$", message = "Vänligen fyll i ditt telefonnummer med siffror.")
     private String phoneNumber;
 
