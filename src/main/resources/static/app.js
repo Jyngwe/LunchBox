@@ -76,7 +76,7 @@ function initMap() {
         });
         var loggedIn = '<div id="infoWindowDiv">'+"Logga in för att se mer information"+'</div>';
         if(pers != ""){
-            loggedIn = '<p>Säljare: '+pers.firstName+'</p><p>Telefonnummer: 0'+pers.phoneNumber+'</p>';
+            loggedIn = '<p>Pris: '+pos.pris+'kr</p><p>Säljare: '+pers.firstName+'</p><p>Telefonnummer: 0'+pers.phoneNumber+'</p>';
         }
         var infowindow = new google.maps.InfoWindow({
             content: '<div class="infoWindow"><div><h1>'+pos.description+'</h1>' +
@@ -147,7 +147,7 @@ function initMap() {
                 map.panTo(this.getPosition());
                 activeMarker = this;
                 infowindow.open(map, marker);
-                setTimeout(function() { map.panBy(0,-60)}, 1000);
+                setTimeout(function() { map.panBy(-10,-60)}, 700);
 
             }
         });

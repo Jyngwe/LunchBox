@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
 <head>
     <title>Simple Map</title>
-    <meta name="viewport" content="initial-scale=1.0"/>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta charset="utf-8"/>
     <link type="text/css" rel="stylesheet" th:href="@{/style.css}"/>
     <!--de nya filerna för slides-->
@@ -28,7 +28,8 @@
 
         <div id ="slider">
             <img src="../images/matladasista2.png" alt="" />
-            <img src="../images/mealprep5.jpg" alt="" />
+            <!--<img src="../images/mealprep5.jpg" alt="" />-->
+            <img src="../images/bannerbild4.jpg" alt="" />
             <img src="../images/mealprep6.jpg" alt="" />
 
         </div>
@@ -52,6 +53,7 @@
     </section>
     <section>
         <!--Hur fungerar det? Stegvis-->
+        <h2 class="text2">Hur fungerar det?</h2>
         <div class="left">
             <img class="imgen" src="../images/002-people.png"/>
             <h3>Laga Matlåda</h3>
@@ -74,14 +76,14 @@
         <section>
             <img src="../images/Kristoffer.png"/>
 
-            <h3>Kristoffer Schmidt<h4> "LunchBox har hjälpt min vardag till det bättre! Jag har även fått chansen att smaka massa
-                spännande och god mat!"</h4>
+            <h3>Kristoffer Schmidt<h5> "LunchBox har hjälpt min vardag till det bättre! Jag har även fått chansen att smaka massa
+                spännande och god mat!"</h5>
             </h3>
         </section>
         <section>
             <img src="../images/Sandra.png"/>
 
-            <h3>Sandra Kjellström<h4> "Det är så otrolig smidigt. Jag har storkok varje söndag och tjänar massa pengar!" </h4>
+            <h3>Sandra Kjellström<h5> "Det är så otrolig smidigt. Jag har storkok varje söndag och tjänar massa pengar!" </h5>
             </h3>
         </section>
     </footer>
@@ -90,7 +92,7 @@
                 <img src="../images/lunchboxlogga-footer.png" class="headerimg"/>
             </section>
             <section>
-                <input class="knappfooter" value="Om oss"/>
+                <input onclick="omossfunk()" class="knappfooter" value="Om oss"/>
                 <a href="https://www.youtube.com/watch?v=54hnztzvD0U"><input class="knappfooter" value="Så fungerar det"/></a>
                 <a href="http://www.koket.se/"><input onclick="fa()" class="knappfooter" value="Få inspiration"/></a>
             </section>
@@ -219,6 +221,21 @@
     </form>
     <button class="close" onclick="closefaqfunk();" value="Close">X</button>
 </div>
+
+    <div id="omoss">
+        <form  method="POST">
+            <h1>OM OSS</h1>
+            <h1 class="h1faq">OM OSS</h1>
+            <h3>
+                Lunchbox är en marknadsplats för privatpersoner som vill köpa och sälja matlåder online.
+                Skaparna bakom idén är Cecilia, Johan, Nadia, Maximillian och Adam som tillsammans under ett slutprojekt i skolan
+                kom på ideén. Dem har sedan dess jobbat hårt för att ta fram den bästa verisonen av Lunchbox.
+            </h3>
+        </form>
+    <button class="close" onclick="closeomossfunk();" value="Close">X</button>
+    </div>
+
+
 
 
 

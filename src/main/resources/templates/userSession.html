@@ -3,7 +3,7 @@
 <head>
 
     <title>Simple Map</title>
-    <meta name="viewport" content="initial-scale=1.0"/>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta charset="utf-8"/>
 
     <link type="text/css" rel="stylesheet" th:href="@{/style.css}"/>
@@ -22,6 +22,9 @@
     <section>
         <form class="userButton" action="login" method="POST">
             <input onclick="showSalesForm()" class="knappstor2" value="Sälja mat"/>
+        </form>
+        <form class="userButton">
+            <input onclick="showBuyerInfo()" class="knappstor2" value="Köpa mat"/>
         </form>
         <form class="userButton" action="updateLunchBoxes" method="post">
             <input type="submit" class="knappstor2" value="Hantera matlådor"/>
@@ -47,12 +50,12 @@
 <footer id="footer">
     <section>
         <img src="../images/Kristoffer.png"/>
-        <h3>Kristoffer Schmidt<p>  "LunchBox har hjälpt min vardag till det bättre! Jag har även fått chansen att smaka massa
-            spännande och god mat!"</p></h3>
+        <h3>Kristoffer Schmidt<h5>  "LunchBox har hjälpt min vardag till det bättre! Jag har även fått chansen att smaka massa
+            spännande och god mat!"</h5></h3>
     </section>
     <section>
         <img src="../images/Sandra.png"/>
-        <h3>Sandra Kjellström<p> "Det är så otrolig smidigt. Jag har storkok varje söndag och tjänar massa pengar!"</p></h3>
+        <h3>Sandra Kjellström<h5> "Det är så otrolig smidigt. Jag har storkok varje söndag och tjänar massa pengar!"</h5></h3>
     </section>
 
 </footer>
@@ -138,6 +141,18 @@
     </form>
     <button class="close" onclick="closeSalesForm();" value="Close">X</button>
 
+</div>
+
+<!--KÖPINFOFORMULÄR-->
+<div id="buyerinfo">
+    <h1>Så här fungerar det</h1>
+    <ul>
+    <li><div>Med hjälp av kartan letar du upp matlådor, som representeras av ikoner på den typ av rätt som säljs just där (Kyckling, Nötkött, Fläskkött, Fisk, Vegetariskt eller Vegan)</div></li>
+    <li><div>När du klickar på en ikon i det område du är intresserad av att handla får du mer information om just den matlådan, och vem som säljer den</div></li>
+    <li><div>Själva köptransaktionen lämnar vi upp till dig. Ta kontakt med säljaren och meddela personen om att du är intresserad av att köpa matlådan</div></li>
+    </ul>
+    <button onclick="closeBuyerInfo()">Jag förstår! Låt mig börja shoppa</button>
+    <button class="close" onclick="closeBuyerInfo();" value="Close">X</button>
 </div>
 
 <script type="text/javascript" src="/mapstyle.js"></script>

@@ -1,4 +1,9 @@
+html{
+    margin: 0;
+    line-height: 1;
+}
 body {
+    line-height: 1;
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -17,6 +22,7 @@ body >  header {
 body > header:nth-child(1) > div:nth-child(1) {
     margin-bottom: -71px;
     text-align: right;
+    margin-right: 54px;
 }
 .knappstor {
     /*padding: 12px 90px;*/
@@ -27,11 +33,11 @@ body > header:nth-child(1) > div:nth-child(1) {
     background: beige;
     color: #66CC99;
     height: 60px;
-    width: 100px;
+    width: 130px;
     line-height: 60px;
-    margin: 15px 15px;
     text-align: center;
-    border: 0;
+    border: 4px solid #66CC99;
+    margin: 15px 10px;
     /* transition: all 0.3s ease 0s;*/
 }
 .knappstor:hover {
@@ -70,7 +76,7 @@ body > header:nth-child(1) > div:nth-child(1) {
 }
 
 #infoWindowDiv {
-    padding: 30%;
+    padding: 10%;
     background-color: red;
 }
 body > header:nth-child(1) > div:nth-child(2) {
@@ -89,7 +95,8 @@ body > section:nth-of-type(1){
 }
 body > section:nth-of-type(2){
     background-color: white;
-    padding: 8% 0% 8% 0%;
+    padding: 1% 0% 1% 0%;
+    margin: 1% 0% 1% 0%;
 }
 .filter::-webkit-input-placeholder {
      color: #4a4a4a;
@@ -117,7 +124,7 @@ body > section:nth-of-type(2){
     font-family:mySecondFont;
 }
 .filter{
-    border: rgb(230, 230, 230);;
+    border: 20px solid rgba(1, 1, 1, 0.1);
     border-top:0;
     width:20%;
     text-align: center;
@@ -155,23 +162,21 @@ body> footer:nth-of-type(1) > section:nth-of-type(1){
 body > footer:nth-of-type(1)> section:nth-of-type(2) {
     float: right;
 }
-body  > footer:nth-of-type(1)> section:nth-of-type(2) > img {
-    width: 20%;
-}
-body  > footer:nth-of-type(1)> section:nth-of-type(1) > img {
+body  > footer:nth-of-type(1)> section > img {
     width: 20%;
 }
 /*NADIAS som Cissi klistrat in*/
 .knappfooter {
-    background-color:#4bc970;
+    background-color:#66CC99;
     font-family: mySecondFont;
     font-size: 17px;
+    border: 4px solid beige;
     color: white;
     height: 60px;
-    width: 200px;
+    max-width: 300px;
+    width: 100%;
     line-height: 60px;
     text-align: center;
-    border: 0;
     font-size: x-large;
 }
 
@@ -192,17 +197,17 @@ a {
 /*FOOTER NUMMER 2*/
 
 body > footer:nth-of-type(2){
-       display: block;
+    font-size: 0;
        overflow: visible;
        margin-right: auto;
        margin-left: auto;
        padding-top: 40px;
        padding-bottom: 20px;
-       background-color: #4bc970;
+       background-color: #66CC99;
    }
 body > footer:nth-of-type(2) > section {
-       width: 24.5%;
-       display: inline-block;
+    width: 24.5%;
+    display: inline-block;
        height: 100%;
        text-align: center;
 }
@@ -250,7 +255,6 @@ color:white;
 
 
 #text1 {
-
     margin-bottom: -16px;
     font-family: mySecondFont;
     letter-spacing: 4px;
@@ -264,6 +268,22 @@ color:white;
 
 #text1:hover {
     color: #ff5c5c;
+}
+
+.text2 {
+    margin-bottom: 25px;
+    font-family: mySecondFont;
+    letter-spacing: 4px;
+    color: #66CC99;
+    font-size: 45px;
+    line-height: 74px;
+    font-weight: 400;
+    text-align: center;
+    text-align: center;
+}
+
+.text2:hover {
+    color: #373838
 }
 
 .headerimg {
@@ -325,6 +345,24 @@ h1 {
     transform: translate(-50%, -50%);
     letter-spacing: 1px;
 }
+#buyerinfo {
+    font-family: mySecondFont;
+    color:white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color:rgba(128, 128, 128, 0.93);
+    text-align: center;
+    align-content: center;
+    visibility: hidden;
+    z-index:999;
+    width: 550px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 1px;
+}
+
 
 .settings {
     visibility: visible;
@@ -455,7 +493,7 @@ label.light {
     top: 55%;
     transform: translate(-50%, -50%);
 }
-#kontaktaoss {
+#kontaktaoss, #omoss {
     font-family: Montserrat, sans-serif;
     color:white;
     rgba(128, 128, 128, 0.93);
@@ -624,7 +662,15 @@ h3 {
 h4 {
     font-family: mySecondFont;
     color: #373838;
-    font-size:15px
+    font-size:15px;
+    font-weight: 100;
+}
+h5 {
+    font-family: mySecondFont;
+    color: #373838;
+    font-size:15px;
+    font-weight: 100;
+    font-style: italic;
 }
 .close {
     position: absolute;
@@ -747,4 +793,130 @@ padding-bottom: 40px;
 
 p {
 text-size: x-small
+}
+
+
+/* MOBIL CSS */
+@media screen and (max-width: 740px) {
+    h3{
+        font-size: 20px;
+    }
+    body > header:nth-child(1) > div:nth-child(1) {
+        margin-bottom: -20px;
+        text-align: center;
+        margin-right: 0;
+    }
+    #text1{
+        line-height: 50px;
+    }
+    #brodtext{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        line-height: 30px;
+    }
+    #map {
+        border: 0;
+        height: 500px;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 13px;
+    }
+    body > section:nth-of-type(2) {
+        padding: 3% 0;
+    }
+    body > footer:nth-of-type(1)> section > img {
+        width: 60%;
+    }
+    body > footer:nth-of-type(2){
+        padding-top: 25px;
+    }
+    body > footer:nth-of-type(2) > section:nth-of-type(1){
+        display: block;
+        width: auto;
+        margin: 0 auto 20px;
+    }
+    body > footer:nth-of-type(2) > section{
+        width: 50%;
+        display: inline-block;
+    }
+    body > footer:nth-of-type(2) > section:nth-of-type(4){
+        padding-top: 12px;
+        width: 100%;
+    }
+    .annons{
+        width: 87%;
+        padding: 0;
+        position: absolute;
+        top: 95%;
+    }
+    .infoWindow{
+        min-width: 0;
+    }
+    .infoWindow img{
+        width: 35%;
+        right: 0px;
+    }
+    .infoWindow p:nth-of-type(1){
+        top: 84px;
+        right: -5px;
+        width: 96px;
+    }
+    .infoWindow h1{
+        margin-bottom: 0px;
+    }
+    .infoWindow p:nth-of-type(2){
+        font-size: 13px;
+    }
+    #infoWindowDiv{
+        padding: 0;
+    }
+    #id{
+        width: 87%;
+    }
+    #bg{
+        width: 87%;
+    }
+    #faq{
+        width: 87%;
+    }
+    .knappstor{
+        border: 4px solid #66CC99;
+        margin: 15px 10px;
+        width: 40%;
+    }
+    #kontaktaoss{
+        width: 87%;
+    }
+    #sidebar{
+        float: none;
+        width: auto;
+        height: auto;
+        padding: 10px;
+    }
+    #sidebar #text1 {
+        margin-top: 10px;
+    }
+    #main{
+        float: none;
+        height: auto;
+        width: auto;
+    }
+    .knappfooter{
+        height: 40px;
+        width: 87%;
+    }
+    .left{
+        padding: 4px;
+    }
+    .centered{
+        padding: 4px;
+    }
+    .right{
+        padding: 4px;
+    }
+}
+@media screen and (max-height: 641px){
+    #map {
+        height: 400px;
+    }
 }
