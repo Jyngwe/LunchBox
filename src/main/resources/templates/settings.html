@@ -39,5 +39,13 @@
         <button type="submit">Tillbaka</button>
     </form>
 </div>
+<!--Bekräftelse upplagd matlåda-->
+<div id="updatedSettings">
+    <button onclick="closeUpdatedSettings()">Dina användaruppgifter är nu uppdaterade</button>
+    <button class="close" onclick="closeUpdatedSettings();" value="Close">X</button>
+</div>
+<script type="text/javascript" src="/lightbox.js"></script>
+<script type="text/javascript" th:if="${updatedSettings}">showUpdatedSettings()</script>
+
 </body>
 </html>
