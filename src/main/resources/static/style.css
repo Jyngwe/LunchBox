@@ -124,7 +124,7 @@ body > section:nth-of-type(2){
     font-family:mySecondFont;
 }
 .filter{
-    border: 20px solid rgba(1, 1, 1, 0.1);
+    border: 20px solid rgb(221, 221, 199);
     border-top:0;
     width:20%;
     text-align: center;
@@ -547,7 +547,9 @@ label.light {
     top: 55%;
     transform: translate(-50%, -50%);
     }
-
+#bilder {
+width:100px;
+}
 #faq{
     font-family: Montserrat, sans-serif;
     color:white;
@@ -750,7 +752,12 @@ h5 {
 .imgen {
    width: 80px;
 }
-
+.bild {
+width:90px;
+}
+.bilder {
+width:20%;
+}
 
 /* Max hemliga dokument */
 .infoWindow {
