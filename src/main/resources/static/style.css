@@ -764,6 +764,7 @@ h5 {
 .infoWindow h1{
     color: black;
     margin-bottom: 10px;
+    font-size: 200%;
 }
 .infoWindow p{
     margin: 2px 0;
