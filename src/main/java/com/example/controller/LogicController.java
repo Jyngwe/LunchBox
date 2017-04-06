@@ -76,7 +76,8 @@ public class LogicController {
                     .addObject("user", session.getAttribute("user"))
                     .addObject("person", returnCorrectPerson(((User)session.getAttribute("user")).getUserID()) )
                     .addObject("lunchBoxes", lunchBoxesJson)
-                    .addObject("lunchbox", lunchbox);
+                    .addObject("lunchbox", lunchbox)
+                    .addObject("persons", personJson);
         }
         User user = new User("", "", "");
         Person person = new Person("", "", "");
@@ -178,7 +179,7 @@ public class LogicController {
 //Skapa ny lunchbox utefter formulärets information
     @PostMapping("/lunchbox")
     public ModelAndView newLunchBox(LunchBox lunchbox, String image, String location, HttpSession session) throws SQLException {
-        System.out.println(location);
+
         GeoApiContext context = new GeoApiContext().setApiKey("AIzaSyBTZQRmcgBi0Fw0rNCsKoUBZohWk7UW0dw&");
         GeocodingApiRequest req = GeocodingApi.newRequest(context).address(location);
         GeocodingResult[] results = req.awaitIgnoreError();
@@ -216,7 +217,8 @@ public class LogicController {
     @GetMapping("/settings")
     public ModelAndView settings(HttpSession session) {
         return new ModelAndView("settings")
-                .addObject("userSession", session);
+                .addObject("userSession", session)
+                .addObject("persons", personJson);
     }
     @PostMapping("/settings")
     public ModelAndView changeSettings(@Valid User user, BindingResult bru, @Valid Person person, BindingResult brp, @RequestParam String repeatedPassword, HttpSession session) throws Exception {
@@ -232,7 +234,8 @@ public class LogicController {
                 error = "Lösenorden stämmer inte överrens";
             }
             return new ModelAndView("settings")
-                    .addObject("error", error);
+                    .addObject("error", error)
+                    .addObject("persons", personJson);
         }
 
         user.setUserName(((User)session.getAttribute("user")).getUserName());
@@ -252,12 +255,14 @@ public class LogicController {
         return new ModelAndView("settings")
                 .addObject("userSession", session)
                 .addObject("updatedSettings", updatedSettings);
+                .addObject("persons", personJson);
+
     }
 
     //Visa alla lunchboxes tillhörande inloggad person
     @PostMapping("/updateLunchBoxes")
     public ModelAndView update(HttpSession session, LunchBox lunchbox) {
-        
+
         Person person = (Person)session.getAttribute("person");
         ArrayList<LunchBox> personLunchBoxes = new ArrayList<>();
 

@@ -9,6 +9,10 @@ var markerListCluster = [];
 var persons = "";
 var markerCluster;
 
+/*if (location.protocol != 'https:')
+{
+    location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+}*/
 
 //initMap körs automatiskt när sidan laddas med hjälp av "async defer" i .html
 function initMap() {
