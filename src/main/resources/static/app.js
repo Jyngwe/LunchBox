@@ -160,7 +160,6 @@ function initMap() {
 
         if(markerListCluster.length == 0) {
             markerListCluster = markerList;
-            console.log("Edited markerListCluser with length: "+markerListCluster.length)
         }
         //google.maps.event.addDomListener(window, 'load', initialize);
         return marker;
@@ -230,10 +229,6 @@ function success(pos) {
     var crd = pos.coords;
     uluru = { lat: crd.latitude, lng: crd.longitude };
     map.setCenter(uluru);
-    console.log('Your current position is:');
-    console.log('Latitude: '+crd.latitude);
-    console.log('Longitude: '+crd.longitude);
-    console.log('More or less '+crd.accuracy+' meters.');
 };
 
 function error(err) {
@@ -247,7 +242,7 @@ function filterMap(input){
             markerListCluster.push(markerList[i]);
             markerList[i].setVisible(true);
         }
-        else if(infoWindowList[i].content.toLowerCase().includes(input.toLowerCase())){
+        else if(infoWindowList[i].content.toLowerCase().substring(0,infoWindowList[i].content.toLowerCase().indexOf("<img src=")).includes(input.toLowerCase())){
             markerListCluster.push(markerList[i]);
             markerList[i].setVisible(true);
         }

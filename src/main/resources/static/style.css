@@ -76,8 +76,8 @@ body > header:nth-child(1) > div:nth-child(1) {
 }
 
 #infoWindowDiv {
-    padding: 10%;
-    background-color: red;
+    padding: 6%;
+    background-color: #66CC99;
 }
 body > header:nth-child(1) > div:nth-child(2) {
     padding-bottom: 10px;
@@ -170,7 +170,7 @@ body  > footer:nth-of-type(1)> section > img {
     background-color:#66CC99;
     font-family: mySecondFont;
     font-size: 17px;
-    border: 4px solid beige;
+    border: 0;
     color: white;
     height: 60px;
     max-width: 300px;
@@ -184,8 +184,8 @@ a {
     text-decoration: none;
 }
 .knappfooter:hover {
-    background-color:#66CC99;
-    color: white;
+    background-color: white;
+    color: #66CC99;
     cursor: pointer;
 }
 .foljoss {
@@ -778,6 +778,7 @@ width:20%;
 .infoWindow p{
     margin: 2px 0;
     font-size: 15px;
+    text-align: left;
 }
 .infoWindow p:nth-of-type(1){
     position: absolute;
@@ -951,6 +952,7 @@ text-size: x-small
     .knappfooter{
         height: 40px;
         width: 87%;
+
     }
     .left{
         padding: 4px;

@@ -290,9 +290,6 @@ public class LogicController {
             for (int i = 0; i<lunchBoxes.size(); i++) {
                 if(lunchBoxes.get(i).getLunchBoxID() == lunchboxid) {
                     lunchBoxes.remove(i);
-                    for(LunchBox box : lunchBoxes){
-                        System.out.println(box.getDescription());
-                    }
                 }
             }
 
@@ -416,7 +413,7 @@ public class LogicController {
     public ModelAndView getApi(@RequestParam String ingredient) throws Exception{
         String url = "https://maps.googleapis.com/maps/api/geocode/json?address=10+Tulegatan,+Stockholm,+Sweden&key=AIzaSyBTZQRmcgBi0Fw0rNCsKoUBZohWk7UW0dw";
         String ingredientInfo = readUrl(url);
-        System.out.println(ingredientInfo);
+
         boolean searchedForIngredient = true;
 
         return new ModelAndView("test")
