@@ -308,7 +308,7 @@ public class LogicController {
                 .addObject("personLunchBoxes", personLunchBoxes)
                 .addObject("lunchBoxes", lunchBoxesJson);
     }
-    @PostMapping("/decrease")
+    /*@PostMapping("/decrease")
     public ModelAndView decreaseAmount(@RequestParam int lunchboxid, HttpSession session) throws SQLException {
         ArrayList<LunchBox> personLunchBoxes = new ArrayList<>();
         Person person =(Person)session.getAttribute("person");
@@ -337,7 +337,7 @@ public class LogicController {
                 .addObject("userSession", session)
                 .addObject("personLunchBoxes", personLunchBoxes)
                 .addObject("lunchBoxes", lunchBoxesJson);
-    }
+    }*/
 
 // Funktioner
 

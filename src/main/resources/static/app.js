@@ -80,7 +80,7 @@ function initMap() {
         });
         var loggedIn = '<div id="infoWindowDiv">'+"Logga in för att se mer information"+'</div>';
         if(pers != ""){
-            loggedIn = '<p>Pris: '+pos.pris+'kr</p><p>Säljare: '+pers.firstName+'</p><p>Telefonnummer: 0'+pers.phoneNumber+'</p>';
+            loggedIn = '<p>Pris: '+pos.pris+'kr</p><p>Säljare: '+pers.firstName+'</p><p>Telefonnummer: '+pers.phoneNumber+'</p>';
         }
         var infowindow = new google.maps.InfoWindow({
             content: '<div class="infoWindow"><div><h1>'+pos.description+'</h1>' +

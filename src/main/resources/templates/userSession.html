@@ -65,11 +65,11 @@
     </section>
     <section>
         <input onclick="omossfunk()" class="knappfooter" value="Om oss"/>
-        <a href="https://www.youtube.com/watch?v=54hnztzvD0U"><input class="knappfooter" value="Så fungerar det"/></a>
-        <a href="http://www.koket.se/"><input onclick="fa()" class="knappfooter" value="Få inspiration"/></a>
+        <a href="https://www.youtube.com/watch?v=54hnztzvD0U" target="_blank"><input class="knappfooter" value="Så fungerar det"/></a>
+        <a href="http://www.koket.se/" target="_blank"><input onclick="fa()" class="knappfooter" value="Få inspiration"/></a>
     </section>
     <section>
-        <a href="https://www.livsmedelsverket.se/matvanor-halsa--miljo/"><input onclick="fa()" class="knappfooter" value="Vad bör du tänka på?"/></a>
+        <a href="https://www.livsmedelsverket.se/matvanor-halsa--miljo/" target="_blank"><input onclick="fa()" class="knappfooter" value="Vad bör du tänka på?"/></a>
         <input onclick="faqfunk()" class="knappfooter" value="FAQ"/>
         <input onclick="kontaktaossfunk()" class="knappfooter" value="Kontakta oss"/>
     </section>
@@ -113,9 +113,9 @@
             <input id="hiddenImage" type="hidden" name="image" value="value"/></div>
             <div><label for="matlada">Kort beskrivning av din rätt. inkl ingredienser.</label>
             <textarea id="matlada" th:field="${lunchbox.ingridiences}" name="ingridiences"></textarea></div>
-            <label for="amountOfLunchBoxes">Hur många matlådor vill du sälja?</label>
+<!--            <label for="amountOfLunchBoxes">Hur många matlådor vill du sälja?</label>
             <input type="text" id="amountOfLunchBoxes" name="amountOfLunchBoxes"
-                   th:value="${lunchbox.amountOfLunchBoxes}"/>
+                   th:value="${lunchbox.amountOfLunchBoxes}"/>-->
             <label for="pris">Hur mycket skall varje matlåda kosta?</label>
             <input type="text" id="pris" name="pris" th:value="${lunchbox.pris}"/>
             <label for="location">Var kommer försäljningen att ske?</label>

@@ -295,7 +295,7 @@ color:white;
 }
 
 #map {
-    border: 20px solid rgba(1, 1, 1, 0.1);
+    border: 20px solid rgb(221, 221, 199);
     height: 360px;
     width: 700px;
     margin: 0 auto;
