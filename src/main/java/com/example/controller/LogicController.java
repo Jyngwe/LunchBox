@@ -255,6 +255,7 @@ public class LogicController {
         return new ModelAndView("settings")
                 .addObject("userSession", session)
                 .addObject("updatedSettings", updatedSettings)
+
                 .addObject("persons", personJson);
 
     }
